@@ -1,0 +1,108 @@
+/* --------------------------------------------------------------------------
+
+    Contents Width
+
+   -------------------------------------------------------------------------- */
+$viewMinWidth: 320px;
+$contentsWidth: 1100px;
+$contentsWidthNarrow: 750px;
+
+
+/* --------------------------------------------------------------------------
+
+    Media Query
+
+   -------------------------------------------------------------------------- */
+$breakPointSp: 414px;
+$breakPointTab: 768px;
+$breakPointPc: 1025px;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Size
+
+   -------------------------------------------------------------------------- */
+/* Liquid
+   ========================================================================== */
+// font-size: clampFs(最小値, 推奨値, 最大値, 画面幅);
+// ex. font-size: clampFs(12, 14, 16, 375);
+@use "sass:math";
+@function clampFs($minSize, $defalutSize, $maxSize, $viewPort) {
+  $minSize: $minSize * .1rem;
+  $maxSize: $maxSize * .1rem;
+  $num: calc(100 / $viewPort * 1vw);
+  $defalutSize_vw: $num * $defalutSize;
+  @return clamp($minSize, $defalutSize_vw, $maxSize);
+}
+
+/* rem
+   ========================================================================== */
+$fontSize10: 1rem;
+$fontSize11: 1.1rem;
+$fontSize12: 1.2rem;
+$fontSize13: 1.3rem;
+$fontSize14: 1.4rem;
+$fontSize15: 1.5rem;
+$fontSize16: 1.6rem;
+$fontSize17: 1.7rem;
+$fontSize18: 1.8rem;
+$fontSize19: 1.9rem;
+$fontSize20: 2rem;
+$fontSize21: 2.1rem;
+$fontSize22: 2.2rem;
+$fontSize23: 2.3rem;
+$fontSize24: 2.4rem;
+$fontSize60: 6rem;
+$fontSize72: 7.2rem;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Color
+
+   -------------------------------------------------------------------------- */
+/* General
+   ========================================================================== */
+$whiteColor: #fff;
+$blackColor: #000;
+$transparentColor: transparent;
+
+$baseFontColor: #333;
+$linkColor: #333;
+$linkHoverColor: #391e88;
+$linkActiveColor: #595bd4;
+
+
+/* Other
+   ========================================================================== */
+$mainColor: #391e88;
+$mainColor_a798b7: #a798b7;
+$mainColor_21054d: #21054d;
+$mainColor_4f31a5: #4f31a5;
+$mainColor_f1ebf8: #f1ebf8;
+$mainColor_bbaed5: #bbaed5;
+$accentColor_f5f534: #f5f534;
+
+$grayColor_e8e8e8: #e8e8e8;
+$grayColor_f0f0f0: #f0f0f0;
+$grayColor_f7f7f7: #f7f7f7;
+$grayColor_707070: #707070;
+$grayColor_ddd: #ddd;
+$grayColor_aaa: #aaa;
+
+$otherColor_120e19: #120e19;
+
+$alphaColor1: rgba(0, 0, 0, .3);
+// $alphaColor2: rgba(255, 255, 255, .7);
+// $alphaColor3: rgba(255, 255, 255, .1);
+
+$gradationColorBtn: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+$gradationColorMenuBg: linear-gradient(135deg, #7633a4, #250d65); // PageNation
+
+/* --------------------------------------------------------------------------
+
+    Font Family
+
+   -------------------------------------------------------------------------- */
+$fontMontserrat: "Montserrat", sans-serif;

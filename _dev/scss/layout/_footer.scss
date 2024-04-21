@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------------------
+
+    Footer
+
+   -------------------------------------------------------------------------- */
+
+/* .l-footer
+   ========================================================================== */
+.l-footer {
+  padding: 60px 15px;
+  background-color: $otherColor_120e19;
+  @include tab {
+    padding: 60px 30px;
+  }
+
+  &-nav {
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      @include tab {
+        justify-content: center;
+      }
+    }
+    &Link {
+      font-family: $fontMontserrat;
+      font-size: clampFs(11, 12, 14, 375);
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $whiteColor;
+      @include tab {
+        font-size: $fontSize14;
+      }
+    }
+  }
+  &-copyright {
+    margin-top: 22px;
+    font-size: $fontSize10;
+    text-align: center;
+    color: $mainColor_a798b7;
+    @include tab {
+      margin-top: 30px;
+    }
+  }
+}

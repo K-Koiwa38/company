@@ -1,0 +1,28 @@
+/* --------------------------------------------------------------------------
+
+    Header
+
+   -------------------------------------------------------------------------- */
+.l-header {
+  padding: 10px 15px;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(33, 5, 77, .5);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 97;
+  width: 100%;
+  @include tab {
+    background-color: $mainColor_21054d;
+  }
+  @include pc {
+    padding: 10px 30px;
+  }
+
+  &-logo {
+    width: 120px;
+  }
+}

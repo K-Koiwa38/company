@@ -1,0 +1,170 @@
+/* --------------------------------------------------------------------------
+
+    Navigation
+
+   -------------------------------------------------------------------------- */
+/* .l-spMenuBtn
+   ----------------------------------------------------------------- */
+.l-spMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+
+  @include tab {
+    display: none;
+  }
+
+  &::before, &::after, &-line::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    margin-left: -15px;
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: $whiteColor;
+    transition: .2s linear;
+  }
+  &::before {
+    top: 10px;
+  }
+  &[aria-expanded="true"]::before {
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    bottom: 10px;
+  }
+  &[aria-expanded="true"]::after {
+    top: 20px;
+    bottom: auto;
+    transform: rotate(45deg);
+  }
+  &-line::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[aria-expanded="true"] &-line::before {
+    opacity: 0;
+  }
+}
+
+body.is-spMenuOpen {
+  overflow-y: hidden;
+}
+
+/* .l-globalNav
+   ----------------------------------------------------------------- */
+.l-globalNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: $gradationColorMenuBg;
+  transition: opacity .3s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+  }
+  @include tab {
+    width: initial;
+    height: initial;
+    display: block;
+    background: none;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-list {
+    width: 100%;
+    text-align: center;
+   @include tab {
+      display: flex;
+      gap: 25px;
+   }
+   &-item + &-item {
+    margin-top: 20px;
+    @include tab {
+      margin-top: 0;
+    }
+   }
+   &-link {
+      font-family: $fontMontserrat;
+      font-size: clampFs(14, 15, 17, 375);
+      font-weight: bold;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: $whiteColor;
+      @include tab {
+         font-size: $fontSize14;
+         position: relative;
+         &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -3px;
+            z-index: 0;
+            width: 0;
+            height: 1px;
+            background-color: $whiteColor;
+            transition: .2s linear;
+         }
+         &:hover, &:focus {
+            opacity: 1;
+            color: $whiteColor;
+         }
+         &:hover::after, &:focus::after {
+            width: 100%;
+         }
+      }
+   }
+  }
+}
+
+
+/* .l-breadcrumb
+   ----------------------------------------------------------------- */
+// .l-breadcrumb {
+//   margin: 0;
+//   line-height: 1;
+
+//   li {
+//     display: inline;
+//     @include fontSizeTiny;
+//       a {
+//         color: $baseFontColor4;
+
+//         @include pc {
+//           &[href]:hover, &[href]:focus {
+//             color: $linkHover;
+//           }
+//         }
+//       }
+//   }
+
+//   li + li::before {
+//     padding: 0 calc(16 / 600 * 100vw) 0 calc(13 / 600 * 100vw);
+//     display: inline-block;
+//     content: ">";
+//     color: $baseFontColor4;
+
+//     @include tab {
+//       padding: 0 12px 0 8px;
+//     }
+//   }
+// }

@@ -1,0 +1,49 @@
+/* --------------------------------------------------------------------------
+
+    top
+
+   -------------------------------------------------------------------------- */
+/* .p-top-mvArea
+   ========================================================================== */
+.p-top-mvArea {
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh + 65px);
+  height: calc(100svh + 65px);
+  color: $whiteColor;
+  background: url(/common/img/top/mv_bg.jpg.webp) no-repeat center / cover;
+  position: relative;
+  top: -65px;
+  @include tab {
+    padding: 0 15px;
+    height: 100vh;
+    align-items: center;
+    top: 0;
+  }
+  &-ttl {
+    font-family: $fontMontserrat;
+    font-size: clampFs(38, 40, 42, 375);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: .05em;
+    word-break: break-word;
+    text-transform: uppercase;
+    @include tab {
+      font-size: $fontSize60;
+    }
+    @include pc {
+      font-size: $fontSize72;
+    }
+  }
+  &-subTtl {
+    margin-top: 15px;
+    font-size: clampFs(14, 16, 18, 375);
+    line-height: 1.81;
+    letter-spacing: .1em;
+    @include tab {
+      font-size: $fontSize24;
+    }
+  }
+}
