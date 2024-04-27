@@ -12,6 +12,12 @@
   }
 }
 
+@mixin tabMin {
+  @media print, screen and (max-width: $breakPointTab - 1) {
+    @content;
+  }
+}
+
 @mixin tab {
   @media print, screen and (min-width: $breakPointTab) {
     @content;

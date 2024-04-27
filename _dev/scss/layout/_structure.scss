@@ -14,16 +14,11 @@
 //   }
 // }
 
-// .l-contents__inner {
-//   margin: 0 auto;
-//   padding: calc(8 / 720 * 100vw) calc(26 / 720 * 100vw) calc(124 / 720 * 100vw);
-//   width: 100%;
-//   max-width: $contentsWidth;
-
-//   @include pc {
-//     padding: 10px 50px 98px;
-//   }
-//   & > *:first-child {
-//     margin-top: 0;
-//   }
-// }
+.l-contentsInner {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $contentsWidth;
+  @include tab {
+    padding: 0 10px;
+  }
+}

@@ -168,5 +168,55 @@
   }
 }
 
-/* Name
+/* News
    ========================================================================== */
+.c-listNews {
+  @include tabMin {
+    margin-top: 30px;
+  }
+  &-item {
+    font-size: clampFs(13, 14, 15, 375);
+    line-height: 1;
+    @include tab {
+      display: flex;
+      gap: 20px;
+      font-size: $fontSize15;
+    }
+  }
+  &-item + &-item {
+    margin-top: 30px;
+    @include tab {
+      margin-top: 15px;
+    }
+  }
+  &-ttl {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    white-space: pre;
+    @include tab {
+      gap: 22px;
+    }
+    .label {
+      min-width: 82px;
+      min-height: 19px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clampFs(10, 11, 12, 375);
+      line-height: 1;
+      border-radius: 50px;
+      background-color: $grayColor_e8e8e8;
+      @include tab {
+        min-height: 22px;
+        font-size: $fontSize12;
+      }
+    }
+  }
+  &-txt {
+    margin-top: 10px;
+    @include tab {
+      margin-top: 0;
+    }
+  }
+}
