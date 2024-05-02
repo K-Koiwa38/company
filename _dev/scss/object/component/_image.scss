@@ -6,7 +6,7 @@
 /* Single
    ========================================================================== */
 .c-imgSingle {
-  margin: calc(30 / 720 * 100vw) auto 0;
+  margin: 15px auto 0;
   display: block;
   width: 100%;
   @include tab {
@@ -20,22 +20,27 @@
 
 /* Horizontal
    ========================================================================== */
-.c-imgHorizontal__imgLeft,
-.c-imgHorizontal__imgRight {
+.c-imgHorizontal {
   margin: calc(30 / 720 * 100vw) auto 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 18px;
 
   @include tab {
     margin-top: 30px;
     width: 100%;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    gap: 50px;
   }
 
-  .c-imgHorizontal--txtArea {
-    margin-top: calc(14 / 720 * 100vw);
-    order: 2;
+  & + & {
+    margin-top: 70px;
+    @include tab {
+      margin-top: 60px;
+    }
+  }
 
+  &-txtArea {
     @include tab {
       margin-top: 0;
       flex: 1;
@@ -44,29 +49,15 @@
       margin-top: 0;
     }
   }
-  .c-imgHorizontal--imgArea {
-    order: 1;
-
+  &-imgArea {
     @include tab {
-      max-width: 50%;
+      width: 40%;
+      max-width: 445px;
     }
   }
-}
-.c-imgHorizontal__imgLeft {
-  @include tab {
-    .c-imgHorizontal--txtArea {
-      margin-left: 20px;
-    }
-  }
-}
-.c-imgHorizontal__imgRight {
-  @include tab {
-    .c-imgHorizontal--txtArea {
-      margin-right: 20px;
-      order: 1;
-    }
-    .c-imgHorizontal--imgArea {
-      order: 2;
+  &.imgRight {
+    @include tab {
+      flex-direction: row;
     }
   }
 }

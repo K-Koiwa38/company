@@ -179,6 +179,7 @@
     line-height: 1;
     @include tab {
       display: flex;
+      align-items: flex-start;
       gap: 20px;
       font-size: $fontSize15;
     }
@@ -212,11 +213,18 @@
         font-size: $fontSize12;
       }
     }
+    .c-hdgLv1-news + & {
+      margin-top: 10px;
+    }
   }
   &-txt {
     margin-top: 10px;
     @include tab {
       margin-top: 0;
+      line-height: 22px;
+      a:hover, a:focus {
+        color: $mainColor;
+      }
     }
   }
 }

@@ -34,18 +34,14 @@ header, footer, nav, section, article, aside, figure picture {
 }
 
 p {
-  margin-top: calc(20 / 600 * 100vw);
+  margin-top: 20px;
 
   @include tab {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   & + & {
-    margin-top: calc(10 / 600 * 100vw);
-
-    @include tab {
-      margin-top: 10px;
-    }
+    margin-top: 1.5em;
   }
 }
 
@@ -220,40 +216,15 @@ dfn {
   font-style: normal;
 }
 
-/* スクロールバー
-================================*/
-// ::-webkit-scrollbar {
-//   width: 8px;
-//   height: 8px;
-// }
-// ::-webkit-scrollbar-track {
-//   border-radius: 5px;
-//   background-color: #e0e0e0;
-// }
-// ::-webkit-scrollbar-thumb {
-//   border-radius: 5px;
-//   background-color: #777;
-// }
+.fa {
+  font-family: "Font Awesome 6 Free";
+  &-arrow-up {
+    font-weight: 900;
+    &::before {
+      content: "\f062";
+    }
+  }
+}
 
 /* Animation
    ========================================================================== */
-// @keyframes SlideUp {
-//   0% {
-//     top: 100vh;
-//     opacity: 0;
-//   }
-//   100% {
-//     top: 0;
-//     opacity: 1;
-//   }
-// }
-// @keyframes SlideDown {
-//   0% {
-//     top: 0;
-//     opacity: 1;
-//   }
-//   100% {
-//     top: 100vh;
-//     opacity: 0;
-//   }
-// }

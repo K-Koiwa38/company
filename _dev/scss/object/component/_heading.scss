@@ -3,24 +3,106 @@
     Heading
 
    -------------------------------------------------------------------------- */
+.c-hdgWrapper {
+  margin-top: -65px;
+  padding-top: 65px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 220px;
+  color: $whiteColor;
+  background: url(/common/img/top/mv_bg.jpg.webp) no-repeat center / cover;
+  position: relative;
+  @include tab {
+    padding: 65px 15px 0;
+    height: 300px;
+    align-items: center;
+  }
+}
+
 /* H1
    ========================================================================== */
-.h-lv1 {
-
+.c-hdgLv1 {
+  font-size: clampFs(28, 30, 32, 375);
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: $whiteColor;
   @include tab {
+    font-size: $fontSize36;
+  }
+  & .en {
+    display: block;
+    font-family: $fontMontserrat;
+    text-transform: uppercase;
+  }
+  & .ja {
+    font-size: clampFs(12, 13, 14, 375);
+    @include tab {
+      font-size: $fontSize14;
+    }
+  }
+}
+
+.c-hdgLv1-news {
+  font-size: clampFs(20, 22, 24, 375);
+  font-weight: 500;
+  line-height: 1.5;
+  @include tab {
+    font-size: $fontSize32;
   }
 }
 
 /* H2
    ========================================================================== */
-.h-lv2 {
-
+.c-hdgLv2 {
+  padding-left: 20px;
+  font-size: clampFs(16, 18, 20, 375);
+  position: relative;
   @include tab {
+    font-size: $fontSize24;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 6px;
+    height: 100%;
+    border-radius: 3px;
+    background-color: $mainColor;
+  }
+}
+
+.c-hdgLv2-service {
+  font-size: clampFs(17, 18, 20, 375);
+  text-align: center;
+  letter-spacing: .05em;
+  @include tab {
+    font-size: $fontSize24;
+    text-align: left;
+  }
+}
+
+.c-hdgLv2-company {
+  font-size: clampFs(22, 24, 26, 375);
+  text-align: center;
+  letter-spacing: .05em;
+  color: $mainColor;
+  @include tab {
+    font-size: $fontSize32;
   }
 }
 
 /* H3
    ========================================================================== */
+.c-hdgLv3 {
+  font-size: clampFs(15, 16, 17, 375);
+  @include tab {
+    font-size: $fontSize18;
+  }
+}
 
 /* H4
    ========================================================================== */

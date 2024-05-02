@@ -3,5 +3,33 @@
     Table
 
    -------------------------------------------------------------------------- */
-/* Name
+/* c-table01
    ========================================================================== */
+.c-table01 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  tr {
+    border-bottom: 1px solid $grayColor_ddd;
+  }
+  th {
+    text-align: left;
+  }
+  @include tabMin {
+    tr, th, td {
+      display: block;
+    }
+    tr {
+      padding: 20px 0;
+    }
+    td {
+      margin-top: 10px;
+    }
+  }
+  @include tab {
+    margin-top: 30px;
+    th, td {
+      padding: 30px 10px;
+    }
+  }
+}

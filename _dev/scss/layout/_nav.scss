@@ -112,6 +112,7 @@ body.is-spMenuOpen {
       color: $whiteColor;
       @include tab {
          font-size: $fontSize14;
+         text-shadow: 0 0 5px rgba(0, 0, 0, .8);
          position: relative;
          &::after {
             position: absolute;

@@ -10,7 +10,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-
 %flexStyleTab {
   @include tab {
     width: 100%;
@@ -19,59 +18,19 @@
   }
 }
 
-%flexColumnFour {
-  @include tab {
-    margin-right: 33px;
-    width:  calc((100% - 33px *3) / 4);
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-  }
-}
-
-%flexTwoFixedSide {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  > *:last-child {
-    flex: 0 0 auto;
-    margin-top: 0;
-    margin-left: calc(30 / 720 * 100vw);
-
-    @include tab {
-      margin-left: 20px;
-    }
-  }
-
-  > *:first-child {
-    margin-top: 0;
-  }
-}
-
 /* .c-columnTwo
    ========================================================================== */
 .c-columnTwo {
   @extend %flexStyleTab;
 
-  > .c-column__item,
+  > .c-column-item,
   > li {
     @include tab {
-      margin-top: 0;
-      margin-right: 33px;
-      width: calc((100% - 33px) / 2);
+      gap: 60px 50px;
 
       &.c-dl {
-        margin-right: 45px;
+        gap: 30px 45px;
         width: calc((100% - 45px) / 2);
-      }
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-      &:nth-child(n + 3) {
-        margin-top: 33px;
       }
     }
     > *:first-child{
@@ -84,21 +43,16 @@
    ========================================================================== */
 .c-columnThree {
   @extend %flexStyleTab;
+  @include tab {
+    gap: 60px 30px;
+  }
 
-  > .c-column__item,
+  > .c-column-item,
   > li {
     @include tab {
-      margin-right: 33px;
-      width:  calc((100% - 33px *2) / 3);
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      &:nth-child(n + 4) {
-        margin-top: 33px;
-      }
+      width:  calc((100% - 30px *2) / 3);
     }
-    > *:first-child{
+    > *:first-child {
       margin-top: 0;
     }
   }
@@ -108,58 +62,31 @@
    ========================================================================== */
 .c-columnFour {
   @extend %flexStyle;
+  gap: 30px 20px;
+  @include tab {
+    gap: 60px 20px;
+  }
 
-  > .c-column__item,
+  > .c-column-item,
   > li {
-    margin-right: 1em;
-    width: calc((100% - 1em) / 2);
-
-    &:nth-child(2n) {
-      margin-right: 0;
-
-      @include tab {
-        margin-right: 33px;
-      }
-    }
-    &:nth-child(n + 3) {
-      margin-top: 33px;
-    }
+    width: calc((100% - 20px) / 2);
 
     @include tab {
-      margin-right: 33px;
-      width:  calc((100% - 33px *3) / 4);
-
-      &:nth-child(4n) {
-        margin-right: 0;
-      }
-      &:nth-child(n - 4) {
-        margin-top: 0;
-      }
-      &:nth-child(n + 5) {
-        margin-top: 33px;
-      }
+      width:  calc((100% - 20px *3) / 4);
     }
-    > *:first-child{
+    > *:first-child {
       margin-top: 0;
     }
   }
 
   &ToOne {
     @extend %flexStyleTab;
+    @include tab {
+      gap: 60px 50px;
+    }
 
-    > .c-column__item,
+    > .c-column-item,
     > li {
-      @include tab {
-        margin-right: 33px;
-        width:  calc((100% - 33px *3) / 4);
-
-        &:nth-child(4n) {
-          margin-right: 0;
-        }
-        &:nth-child(n + 5) {
-          margin-top: 33px;
-        }
-      }
       > *:first-child{
         margin-top: 0;
       }
@@ -167,52 +94,21 @@
   }
 }
 
-/* .c-lytFlexTwo flex（右要素に応じて左幅変化）
+/* c-lytWorks
    ========================================================================== */
-.c-lytFlexTwo {
-  @extend %flexTwoFixedSide;
-}
-
-/* .c-lytPcFlexTwo PC/Tabのみflex（右要素に応じて左幅変化）
-   ========================================================================== */
-.c-lytPcFlexTwo {
-  @include tab {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    > *:last-child {
-      flex: 1 0 auto;
-      margin: 0 0 0 20px;
-    }
+.c-lytWorks {
+  display: flex;
+  flex-direction: column-reverse;
+  &-name {
+    font-size: $fontSize16;
+    text-align: center;
   }
-
-  > *:first-child {
-    margin-top: 0;
+  &-img {
+    margin-bottom: 10px;
+  }
+  & + & {
+    @include tabMin {
+      margin-top: 40px;
+    }
   }
 }
-
-/* .c-lytPcFlexThree PC/Tabのみflex（2つ目以降2カラム）
-   ========================================================================== */
-.c-lytPcFlexThree {
-  @include tab {
-    display: flex;
-    flex-wrap: wrap;
-
-    > *:first-child {
-      width: 100%;
-    }
-    > *:nth-child(n + 2) {
-      width: calc((100% - 30px) / 2);
-    }
-    > *:nth-child(even) {
-      margin-right: 30px;
-    }
-  }
-  > *:first-child {
-    margin-top: 0;
-  }
-}
-
-/* Name
-   ========================================================================== */

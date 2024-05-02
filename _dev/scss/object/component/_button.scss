@@ -42,9 +42,10 @@
       transform: translateY(-50%);
       transition: .3s;
     }
-    @include pc {
+    @include tab {
       &:hover, &:focus {
         color: $whiteColor;
+        background-position: right center;
         opacity: 1;
       }
       &:hover::after, &:focus::after {

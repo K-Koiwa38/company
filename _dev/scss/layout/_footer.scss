@@ -30,6 +30,25 @@
       color: $whiteColor;
       @include tab {
         font-size: $fontSize14;
+        position: relative;
+         &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -3px;
+            z-index: 0;
+            width: 0;
+            height: 1px;
+            background-color: $whiteColor;
+            transition: .2s linear;
+         }
+         &:hover, &:focus {
+            opacity: 1;
+            color: $whiteColor;
+         }
+         &:hover::after, &:focus::after {
+            width: 100%;
+         }
       }
     }
   }

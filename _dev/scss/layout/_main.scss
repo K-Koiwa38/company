@@ -3,10 +3,16 @@
     Main
 
    -------------------------------------------------------------------------- */
-.l-main {
+.l-mainContents {
+  padding: 40px 0 80px;
+  font-family: $fontMontserrat;
   @include tab {
+    padding: 60px 0 110px;
+    .l-contentsInner.newsArticle {
+      max-width: 750px;
+    }
   }
-
-  @include pc {
+  > *:first-child {
+    margin-top: 0;
   }
 }
