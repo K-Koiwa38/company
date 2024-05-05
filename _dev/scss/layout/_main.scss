@@ -3,6 +3,15 @@
     Main
 
    -------------------------------------------------------------------------- */
+.l-main {
+  &.recruit {
+    padding: 40px 0 80px;
+    background: url(/common/img/recruit/bg_geometry.png.webp) repeat top left;
+    @include tab {
+      padding: 110px 0;
+    }
+  }
+}
 .l-mainContents {
   padding: 40px 0 80px;
   font-family: $fontMontserrat;

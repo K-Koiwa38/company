@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>CONTACT - お問い合わせ｜PON DESIGN</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="お問い合わせページでは、お客さまのご質問やご相談に丁寧に対応いたします。当社のサービスに関する疑問や問題があれば、お気軽にお問い合わせください。">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CONTACT - お問い合わせ｜PON DESIGN">
-<meta property="og:url" content="#/">
-<meta property="og:description" content="お問い合わせページでは、お客さまのご質問やご相談に丁寧に対応いたします。当社のサービスに関する疑問や問題があれば、お気軽にお問い合わせください。">
-<meta property="og:image" content="#/img/ogp.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap">
 <link rel="stylesheet" media="screen,print" href="/common/css/common.css">
 <link rel="icon" type="image/png" href="/common/img/icon-192x192.png">
@@ -51,7 +47,94 @@
     </nav>
 
     <main class="l-mainContents">
-      <div class="l-contentsInner"></div>
+      <div class="l-contentsInner">
+        <p class="u-alignC">Webサイトの制作のご依頼やお見積りなど、<br class="u-pcHide">お気軽にご相談ください。</p>
+
+        <div class="c-boxContact">
+          <div class="c-boxContact-inner">
+            <form class="c-form">
+              <div class="c-form-item">
+                <div class="c-form-title">お問い合わせ種別<span class="require">*必須</span></div>
+                <div class="c-form-parts">
+                  <ul class="c-listChoice">
+                    <li>
+                      <input id="type01" name="type" type="radio" value="お仕事のご依頼・ご相談">
+                      <label for="type01" class="c-radioLabel">お仕事のご依頼・ご相談</label>
+                    </li>
+                    <li>
+                      <input id="type02" name="type" type="radio" value="お見積りのご依頼">
+                      <label for="type02" class="c-radioLabel">お見積りのご依頼</label>
+                    </li>
+                    <li>
+                      <input id="type03" name="type" type="radio" value="採用について">
+                      <label for="type03" class="c-radioLabel">採用について</label>
+                    </li>
+                    <li>
+                      <input id="type04" name="type" type="radio" value="その他">
+                      <label for="type04" class="c-radioLabel">その他</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="name" class="c-form-title">お名前<span class="require">*必須</span></label>
+                <div class="c-form-parts">
+                  <input id="name" name="name" type="text" required="">
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="company" class="c-form-title">会社名<span class="require">*必須</span></label>
+                <div class="c-form-parts">
+                  <input id="company" name="company" type="text" required="">
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="email" class="c-form-title">メールアドレス<span class="require">*必須</span></label>
+                <div class="c-form-parts">
+                  <input id="email" name="email" type="email" required="">
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="tel" class="c-form-title">電話番号<span class="note">（半角数字ハイフンなし）</span></label>
+                <div class="c-form-parts">
+                  <input id="tel" name="tel" type="tel">
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="comment" class="c-form-title">お問い合わせ内容</label>
+                <div class="c-form-parts">
+                  <textarea id="comment" name="comment" placeholder="お問い合わせ内容を具体的にご記入ください"></textarea>
+                </div>
+              </div>
+
+              <div class="c-form-item">
+                <label for="job" class="c-form-title">PON DESIGNをどちらでお知りになりましたか？<span class="require">*必須</span></label>
+                <div class="c-form-parts">
+                  <div class="c-selectForm">
+                    <select id="job" name="job" required="">
+                      <option value="">選択してください</option>
+                      <option value="job1">Google/Yahoo検索</option>
+                      <option value="job2">SNS</option>
+                      <option value="job3">ブログ</option>
+                      <option value="job4">友人や知人</option>
+                      <option value="job5">その他</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-btn u-alignC">
+                <button type="submit" class="c-btn-inner">送信する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!--#include virtual="/common/inc/footer.html" -->

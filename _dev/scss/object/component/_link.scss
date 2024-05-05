@@ -57,7 +57,9 @@
     display: flex;
     overflow-x: auto;
     @include tab {
+      margin: 0 auto;
       padding: 0 10px;
+      max-width: $contentsWidth;
     }
     &-item {
       flex: 0 0 auto;

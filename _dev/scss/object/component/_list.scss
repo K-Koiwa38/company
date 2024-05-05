@@ -23,11 +23,7 @@
 /* List Disc
    ========================================================================== */
 .c-listDisc {
-  margin: calc(30 / 720 * 100vw) 0 0;
-
-  @include tab {
-    margin-top: 20px;
-  }
+  margin: 20px 0 0;
 
   > li {
     padding-left: 1.2em;
@@ -37,26 +33,21 @@
       margin-top: 10px;
     }
 
-    > .c-listDisc > li::before {
-      background-color: $grayColor_aaa;
-    }
-
     &::before {
       position: absolute;
       content: "";
-      left: 0;
-      width: calc(10 / 720 * 100vw);
-      height: calc(10 / 720 * 100vw);
+      left: 2px;
+      width: 4px;
+      height: 4px;
       display: inline-block;
-      margin-top: calc(6 / 720 * 100vw);
+      margin-top: calc(6 / 375 * 100vw);
       background-color: $baseFontColor;
       border-radius: 50%;
 
       @include tab {
-        left: 3px;
-        width: 8px;
-        height: 8px;
-        margin-top: 6px;
+        width: 6px;
+        height: 6px;
+        margin-top: 8px;
       }
     }
   }
@@ -65,14 +56,10 @@
 /* List Number
    ========================================================================== */
 .c-listNumber {
-  margin: calc(30 / 720 * 100vw) 0 0;
+  margin: 20px 0 0;
   display: table;
   width: 100%;
   counter-reset: num;
-
-  @include tab {
-    margin-top: 20px;
-  }
 
   > li {
     display: table-row;
@@ -102,13 +89,9 @@
 /* List Mark
    ========================================================================== */
 .c-listMrk {
-  margin: calc(20 / 720 * 100vw) 0 0;
+  margin: 20px 0 0;
   display: table;
   width: 100%;
-
-  @include tab {
-    margin-top: 20px;
-  }
 
   > li {
     display: table-row;
@@ -137,7 +120,7 @@
 /* List Note
    ========================================================================== */
 .c-listNote {
-  margin: calc(20 / 720 * 100vw) 0 0;
+  margin: 20px 0 0;
   display: table;
   width: 100%;
 
@@ -219,12 +202,27 @@
   }
   &-txt {
     margin-top: 10px;
+    line-height: 1.5;
     @include tab {
       margin-top: 0;
-      line-height: 22px;
       a:hover, a:focus {
         color: $mainColor;
       }
+    }
+  }
+}
+
+/* Contact
+   ========================================================================== */
+.c-listChoice {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+  }
+  @include tabMin {
+    li + li {
+      margin-top: 10px;
     }
   }
 }

@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>PON DESIGN</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="PON DESIGNは、新規サイト制作や運用、アプリ開発に強いWeb制作会社です。サイト作りはお客様の夢を叶えること。だからこそ成果を出すサイトを全力でお作りします。">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PON DESIGN">
-<meta property="og:url" content="#/">
-<meta property="og:description" content="PON DESIGNは、新規サイト制作や運用、アプリ開発に強いWeb制作会社です。サイト作りはお客様の夢を叶えること。だからこそ成果を出すサイトを全力でお作りします。">
-<meta property="og:image" content="#/img/ogp.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap">
 <link rel="stylesheet" media="screen,print" href="/common/css/common.css">
 <link rel="icon" type="image/png" href="/common/img/icon-192x192.png">
@@ -41,15 +37,15 @@
         <dl class="c-listNews">
           <div class="c-listNews-item">
             <dt class="c-listNews-ttl">2030.02.01<span class="label">お知らせ</span></dt>
-            <dd class="c-listNews-txt"><a href="">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a></dd>
+            <dd class="c-listNews-txt"><a href="/news/article.html">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a></dd>
           </div>
           <div class="c-listNews-item">
             <dt class="c-listNews-ttl">2030.01.25<span class="label">制作実績</span></dt>
-            <dd class="c-listNews-txt"><a href="">Smoothiesta様のWebサイトを制作いたしました</a></dd>
+            <dd class="c-listNews-txt"><a href="/news/article300125.html">Smoothiesta様のWebサイトを制作いたしました</a></dd>
           </div>
           <div class="c-listNews-item">
             <dt class="c-listNews-ttl">2030.01.20<span class="label">採用</span></dt>
-            <dd class="c-listNews-txt"><a href="">Webデザイナーを1名募集中です！</a></dd>
+            <dd class="c-listNews-txt"><a href="/news/article300120.html">Webデザイナーを1名募集中です！</a></dd>
           </div>
         </dl>
       </section>
@@ -90,22 +86,35 @@
       </section>
 
       <section class="p-top-sec _works">
-        <div class="p-top-layoutWorks-detail">
-          <h2 class="p-top-hdg u-alignC">
-            <span class="en" lang="en">Works</span>
-            <span class="ja">制作実績</span>
-          </h2>
-          <p class="p-top-txtBase u-alignC">様々なジャンルのWebサイト制作が可能です。<br>ご購入やお申込み数の増加などを実現します！</p>
-          <div class="c-btn u-alignC">
-            <a href="/works" class="c-btn-inner">More</a>
+        <div class="l-contentsInner">
+          <div class="p-top-layoutWorks-detail">
+            <h2 class="p-top-hdg u-alignC">
+              <span class="en" lang="en">Works</span>
+              <span class="ja">制作実績</span>
+            </h2>
+            <p class="p-top-txtBase u-alignC">様々なジャンルのWebサイト制作が可能です。<br>ご購入やお申込み数の増加などを実現します！</p>
+            <div class="c-btn u-alignC">
+              <a href="/works" class="c-btn-inner">More</a>
+            </div>
           </div>
-        </div>
-        <div class="p-top-layoutWorks-img">
-          <div class="p-top-layoutWorks-item"><img src="/common/img/works/smoothiesta.jpg.webp" alt=""></div>
-          <div class="p-top-layoutWorks-item"><img src="/common/img/works/citylab.jpg.webp" alt=""></div>
-          <div class="p-top-layoutWorks-item"><img src="/common/img/works/lamina.jpg.webp" alt=""></div>
-          <div class="p-top-layoutWorks-item"><img src="/common/img/works/tabilog.jpg.webp" alt=""></div>
-          <div class="p-top-layoutWorks-item"><img src="/common/img/works/webConference.jpg.webp" alt=""></div>
+          <!-- <div class="p-top-layoutWorks-img">
+            <div class="p-top-layoutWorks-item"><img src="/common/img/works/smoothiesta.jpg.webp" alt=""></div>
+            <div class="p-top-layoutWorks-item"><img src="/common/img/works/citylab.jpg.webp" alt=""></div>
+            <div class="p-top-layoutWorks-item"><img src="/common/img/works/lamina.jpg.webp" alt=""></div>
+            <div class="p-top-layoutWorks-item"><img src="/common/img/works/tabilog.jpg.webp" alt=""></div>
+            <div class="p-top-layoutWorks-item"><img src="/common/img/works/webConference.jpg.webp" alt=""></div>
+          </div> -->
+          <div id="js-topWorkSplide" class="splide p-top-layoutWorks-img" role="group" aria-label="制作実績サイトキャプチャ">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide p-top-layoutWorks-item"><img src="/common/img/works/smoothiesta.jpg.webp" alt="Smoothiesta様"></li>
+                <li class="splide__slide p-top-layoutWorks-item"><img src="/common/img/works/citylab.jpg.webp" alt="Web Conference様"></li>
+                <li class="splide__slide p-top-layoutWorks-item"><img src="/common/img/works/lamina.jpg.webp" alt="LAMINA様"></li>
+                <li class="splide__slide p-top-layoutWorks-item"><img src="/common/img/works/tabilog.jpg.webp" alt="CITYLab様"></li>
+                <li class="splide__slide p-top-layoutWorks-item"><img src="/common/img/works/webConference.jpg.webp" alt="TABILOG様"></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -152,6 +161,7 @@
     <!--#include virtual="/common/inc/footer.html" -->
   </div><!-- /.l-wrapper -->
 
+  <script src="/common/js/lib.js"></script>
   <script src="/common/js/run.js"></script>
 </body>
 </html>

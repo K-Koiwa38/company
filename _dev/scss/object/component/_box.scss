@@ -6,9 +6,34 @@
 /* .c-box
    ========================================================================== */
 .c-box {
+   margin-top: 28px;
+   padding: 28px 20px;
+   border: 1px solid $mainColor;
+   border-radius: 10px;
+   background-color: $whiteColor;
   @include tab {
+   margin-top: 36px;
+   padding: 58px 20px;
   }
+  > *:first-child {
+   margin-top: 0;
+  }
+}
 
-  @include pc {
-  }
+/* .c-boxContact
+   ========================================================================== */
+.c-boxContact {
+   margin-top: 28px;
+   padding: 28px 30px;
+   background-color: $grayColor_f7f7f7;
+   @include tab {
+      margin-top: 38px;
+      padding: 90px 30px;
+   }
+   &-inner {
+      @include tab {
+         margin: 0 auto;
+         max-width: 920px;
+      }
+   }
 }

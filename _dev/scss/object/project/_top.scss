@@ -75,14 +75,20 @@
   }
   &._works {
     padding: 30px 15px 0;
-    display: flex;
-    flex-direction: column-reverse;
     background-color: $grayColor_f0f0f0;
     @include tab {
       padding: 60px 0 80px;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 20px;
+    }
+    .l-contentsInner {
+      display: flex;
+      flex-direction: column-reverse;
+      @include tab {
+        margin: 0 auto;
+        max-width: 1300px;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+      }
     }
   }
   &._company {

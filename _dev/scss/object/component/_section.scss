@@ -44,3 +44,13 @@
     }
   }
 }
+
+/* c-boxSec
+   ========================================================================== */
+.c-boxSec {
+  margin-top: 40px;
+  @include tab {
+    margin: 60px auto 0;
+    max-width: 920px;
+  }
+}

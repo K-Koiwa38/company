@@ -16,3 +16,48 @@
     font-size: $fontSize15;
   }
 }
+/* .c-blockRecruitMessage
+   ========================================================================== */
+.c-blockRecruitMessage {
+  padding: 0 10px;
+  &Title {
+    text-align: center;
+    color: $mainColor;
+    .en {
+      font-size: clampFs(44, 48, 50, 375);
+      font-weight: bold;
+      letter-spacing: .01em;
+      word-break: break-word;
+      @include tab {
+        font-size: $fontSize72;
+      }
+    }
+    .ja {
+      margin-top: 10px;
+      display: block;
+      font-size: clampFs(16, 18, 20, 375);
+      letter-spacing: .05em;
+      line-height: 1;
+      @include tab {
+        font-size: $fontSize32;
+      }
+    }
+  }
+  &Txt {
+    margin-top: 20px;
+    font-size: clampFs(14, 15, 16, 375);
+    letter-spacing: .05em;
+    line-height: 1.8;
+    text-align: center;
+    @include tab {
+      margin-top: 30px;
+      font-size: $fontSize16;
+    }
+  }
+}
+/* .c-txtRecruitNote
+   ========================================================================== */
+.c-txtRecruitNote {
+  margin-top: 5px;
+  font-size: 80%;
+}

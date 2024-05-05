@@ -136,36 +136,3 @@ body.is-spMenuOpen {
    }
   }
 }
-
-
-/* .l-breadcrumb
-   ----------------------------------------------------------------- */
-// .l-breadcrumb {
-//   margin: 0;
-//   line-height: 1;
-
-//   li {
-//     display: inline;
-//     @include fontSizeTiny;
-//       a {
-//         color: $baseFontColor4;
-
-//         @include pc {
-//           &[href]:hover, &[href]:focus {
-//             color: $linkHover;
-//           }
-//         }
-//       }
-//   }
-
-//   li + li::before {
-//     padding: 0 calc(16 / 600 * 100vw) 0 calc(13 / 600 * 100vw);
-//     display: inline-block;
-//     content: ">";
-//     color: $baseFontColor4;
-
-//     @include tab {
-//       padding: 0 12px 0 8px;
-//     }
-//   }
-// }
